@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import HelmetProvider, {CustomHelmet} from './helmet/HelmetProvider.jsx'
+import HelmetProvider from './helmet/HelmetProvider.jsx'
+import {RouterProvider} from 'react-router-dom'
+import {router} from './router/router.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <CustomHelmet/>
-      <p className="text-red-600">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+      <RouterProvider router={router}>
+      </RouterProvider>
     </HelmetProvider>
   </React.StrictMode>,
 )
