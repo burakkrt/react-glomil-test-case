@@ -5,6 +5,7 @@ import Footer from './footer'
 
 export default function MainLayout() {
 
+
   return (
     <div>
       <CustomHelmet/>

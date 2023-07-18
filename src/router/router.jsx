@@ -4,8 +4,10 @@ import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "../pages/MainLayout.jsx";
 import NotFound404 from "../pages/error/NotFound404.jsx";
 import HomePageLayout from '../pages/home'
+import PrivatePageLayout from '../auth/PrivatePage.jsx'
+import UserLogin from "../pages/login/user";
 
-export const router = createBrowserRouter([
+const router = [
   {
     path: '/',
     element: <MainLayout/>,
@@ -16,11 +18,21 @@ export const router = createBrowserRouter([
         element: <HomePageLayout/>
       }
     ]
+  }, {
+    path: '/user-login',
+    element: <UserLogin/>
   }
-])
+]
 
-// const authMap = router => router.map(route => {
-//   if(route?.auth){
-//     route.element =
-//   }
-// })
+const authMap = router => router.map(route => {
+  if (route?.auth) {
+    route.element = <PrivatePageLayout>{route.element}</PrivatePageLayout>
+  }
+  if (route?.children) {
+    route.children = authMap(route.children);
+  }
+  return route;
+})
+
+
+export default createBrowserRouter(authMap(router))

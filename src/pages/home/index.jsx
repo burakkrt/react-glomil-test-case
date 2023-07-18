@@ -1,8 +1,10 @@
+import WelcomePortal from "./WelcomePortal.jsx";
+
 export default function HomePageLayout() {
 
   return (
     <div>
-      hello welcome
+      <WelcomePortal/>
     </div>
   );
 }
