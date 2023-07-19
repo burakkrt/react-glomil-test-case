@@ -1,4 +1,4 @@
-import welcomePortalImage from '../../assets/img/welcome-portal.png'
+import welcomePortalImage from '../../../assets/img/welcome-portal.png'
 
 export default function WelcomePortal() {
 
