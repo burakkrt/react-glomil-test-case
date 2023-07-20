@@ -10,7 +10,7 @@ export default function PortalLiveProducts() {
         <p className="mt-3">Basit, sezgisel ve güzel deneyimler oluşturmak için Portal 'ın evrensel yazılım dilini
           kullanın.</p>
       </div>
-      <div className="lg:w-3/4 xl:w-3/5 mx-auto flex flex-wrap justify-center">
+      <div className="lg:w-3/4 xl:w-3/5 lg:mx-auto flex flex-wrap justify-center mx-5 sm:mx-0">
         <PortalBox title="Block Explorer" desc="Search for real-time and historical information about the blockchain."
                    link="#"/>
         <PortalBox title="Data Index" desc="Search for real-time and historical information about the blockchain."
