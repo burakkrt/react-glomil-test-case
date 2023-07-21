@@ -10,7 +10,7 @@ export default function Header() {
   }
 
   return (
-    <div className="grid grid-cols-12">
+    <header className="grid grid-cols-12">
       <div className="bg-red-200 col-span-2 flex flex-row justify-center items-center">
         <button><img className="w-full" src={logo} alt="Glomil Teknoloji Logo"
                      style={{maxWidth: "200px"}}/>
@@ -25,6 +25,6 @@ export default function Header() {
       <div className="bg-stone-200 col-span-6">
 
       </div>
-    </div>
+    </header>
   );
 }
