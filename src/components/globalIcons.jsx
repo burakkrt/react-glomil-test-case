@@ -1,4 +1,4 @@
-export {ImTicket as Icon01} from "react-icons/im";
+export {ImStatsDots as Icon01} from "react-icons/im";
 export {BsDisplay as Icon02} from "react-icons/bs";
 export {MdGTranslate as Icon03} from "react-icons/md";
 export {CgMenuGridR as Icon04} from "react-icons/cg";
