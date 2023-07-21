@@ -18,7 +18,7 @@ export default function Header() {
       </div>
       <div className="bg-yellow-200 col-span-4 flex flex-row justify-center items-center gap-x-5 text-lg">
         <button onClick={() => routePageHandler('/')}>Anasayfa</button>
-        <button onClick={() => routePageHandler('/hizmetler')}>Hizmetler</button>
+        <button onClick={() => routePageHandler('/services')}>Hizmetler</button>
         <button onClick={() => routePageHandler('/paketler')}>Paketler</button>
         <button onClick={() => routePageHandler('/urunler')}>Ürünler</button>
       </div>

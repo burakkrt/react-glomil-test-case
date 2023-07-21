@@ -6,6 +6,7 @@ import NotFound404 from "../pages/error/NotFound404.jsx";
 import HomePageLayout from '../pages/home'
 import PrivatePageLayout from '../auth/PrivatePage.jsx'
 import UserLogin from "../pages/login/user";
+import ServicesLayout from "../pages/services";
 
 const router = [
   {
@@ -16,6 +17,9 @@ const router = [
       {
         index: true,
         element: <HomePageLayout/>
+      }, {
+        path: '/services',
+        element: <ServicesLayout/>
       }
     ]
   }, {
