@@ -7,6 +7,7 @@ import HomePageLayout from '../pages/home'
 import PrivatePageLayout from '../auth/PrivatePage.jsx'
 import UserLogin from "../pages/login/user";
 import ServicesLayout from "../pages/services";
+import ServicesWelcome from "../pages/services/welcome"
 
 const router = [
   {
@@ -19,7 +20,11 @@ const router = [
         element: <HomePageLayout/>
       }, {
         path: '/services',
-        element: <ServicesLayout/>
+        element: <ServicesLayout/>,
+        children: [{
+          index: true,
+          element: <ServicesWelcome/>
+        }]
       }
     ]
   }, {
