@@ -1,7 +1,7 @@
 import {HelmetProvider, Helmet} from 'react-helmet-async'
 
 const helmetContext = {
-  title: 'Glomil Teknoloji',
+  title: 'Glomil Teknoloji Portal',
   desc: 'Test case study consisting of 3 pages with ReactJS and TailwindCss.',
   keywords: 'Glomil, Glomil Teknoloji, Portal, Bots, Sementi',
   author: 'https://github.com/burakkrt'
