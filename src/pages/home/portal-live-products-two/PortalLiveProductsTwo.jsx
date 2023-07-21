@@ -1,7 +1,4 @@
-import {ImStatsDots} from "react-icons/im";
-import {BsDisplay} from "react-icons/bs";
-import {MdGTranslate} from "react-icons/md";
-import {CgMenuGridR} from "react-icons/cg";
+import {Icon01, Icon02, Icon03, Icon04} from '../../../components/globalIcons.jsx'
 import plpBG from '../../../assets/img/portal-live-products.png'
 
 export default function PortalLiveProductsTwo() {
@@ -20,7 +17,7 @@ export default function PortalLiveProductsTwo() {
         {/*-------------*/}
         <div className="w-72 bg-slate-50 p-10 rounded text-center lg:text-start">
           <div className="bg-blue-700 inline-block rounded p-4">
-            <ImStatsDots className="text-3xl text-slate-50"/>
+            <Icon01 className="text-3xl text-slate-50"/>
           </div>
           <div className="flex-1 flex flex-col items-center lg:items-start" style={{minHeight: "220px"}}>
             <span className="flex items-center flex-auto text-2xl font-bold">Sentiment Analiz Sorgu Hizmeti</span>
@@ -34,7 +31,7 @@ export default function PortalLiveProductsTwo() {
         {/*-------------*/}
         <div className="w-72 bg-slate-50 p-10 rounded text-center lg:text-start">
           <div className="bg-blue-700 inline-block rounded p-4">
-            <BsDisplay className="text-3xl text-slate-50"/>
+            <Icon02 className="text-3xl text-slate-50"/>
           </div>
           <div className="flex-1 flex flex-col items-center lg:items-start" style={{minHeight: "220px"}}>
             <span className="flex items-center flex-auto text-2xl font-bold">Bots Sorgu Hizmeti</span>
@@ -48,7 +45,7 @@ export default function PortalLiveProductsTwo() {
         {/*-------------*/}
         <div className="w-72 bg-slate-50 p-10 rounded text-center lg:text-start">
           <div className="bg-blue-700 inline-block rounded p-4">
-            <MdGTranslate className="text-3xl text-slate-50"/>
+            <Icon03 className="text-3xl text-slate-50"/>
           </div>
           <div className="flex-1 flex flex-col items-center lg:items-start" style={{minHeight: "220px"}}>
             <span className="flex items-center flex-auto text-2xl font-bold">Translate Hizmeti</span>
@@ -62,7 +59,7 @@ export default function PortalLiveProductsTwo() {
         {/*-------------*/}
         <div className="w-72 bg-slate-50 p-10 rounded text-center lg:text-start">
           <div className="bg-blue-700 inline-block rounded p-4">
-            <CgMenuGridR className="text-3xl text-slate-50"/>
+            <Icon04 className="text-3xl text-slate-50"/>
           </div>
           <div className="flex-1 flex flex-col items-center lg:items-start" style={{minHeight: "220px"}}>
             <span className="flex items-center flex-auto text-2xl font-bold">Aspect Base Sentiment</span>
