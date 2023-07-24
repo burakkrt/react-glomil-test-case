@@ -1,6 +1,9 @@
 import {Icon01, Icon02, Icon03, Icon04} from "../../../components/globalIcons.jsx";
+import {useNavigate} from "react-router-dom";
 
 export default function PortalBoxs() {
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -12,7 +15,7 @@ export default function PortalBoxs() {
           <span className="flex items-center flex-auto text-2xl font-bold">Sentiment Analiz Sorgu Hizmeti</span>
           <p className="text-slate-600">Our mission is to uleash the potential in every team.</p>
           <button className="text-slate-600 bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 duration-150 mt-3"
-                  onClick={() => alert('button passive')}>Ücretsiz
+                  onClick={() => navigate('/services/text-analysis/sentiment')}>Ücretsiz
             Başlat
           </button>
         </div>
@@ -25,7 +28,7 @@ export default function PortalBoxs() {
           <span className="flex items-center flex-auto text-2xl font-bold">Bots Sorgu Hizmeti</span>
           <p className="text-slate-600">Our mission is to uleash the potential in every team.</p>
           <button className="text-slate-600 bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 duration-150 mt-3"
-                  onClick={() => alert('button passive')}>Ücretsiz
+                  onClick={() => navigate('/services/bots')}>Ücretsiz
             Başlat
           </button>
         </div>
@@ -38,7 +41,7 @@ export default function PortalBoxs() {
           <span className="flex items-center flex-auto text-2xl font-bold">Translate Hizmeti</span>
           <p className="text-slate-600">Our mission is to uleash the potential in every team.</p>
           <button className="text-slate-600 bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 duration-150 mt-3"
-                  onClick={() => alert('button passive')}>Ücretsiz
+                  onClick={() => navigate('/services/translate')}>Ücretsiz
             Başlat
           </button>
         </div>
@@ -51,7 +54,7 @@ export default function PortalBoxs() {
           <span className="flex items-center flex-auto text-2xl font-bold">Aspect Base Sentiment</span>
           <p className="text-slate-600">Our mission is to uleash the potential in every team.</p>
           <button className="text-slate-600 bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 duration-150 mt-3"
-                  onClick={() => alert('button passive')}>Ücretsiz
+                  onClick={() => navigate('/services/aspect-base-sentiment')}>Ücretsiz
             Başlat
           </button>
         </div>
