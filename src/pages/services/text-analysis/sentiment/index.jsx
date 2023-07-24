@@ -8,7 +8,7 @@ export default function Sentiment() {
 
 
   return (
-    <div className="p-5 md:p-10" style={{minHeight: "100vh"}}>
+    <div className="p-5 md:p-10">
       <CustomHelmet title="Glomil Portal | Sentiment"/>
       <Breadcrumbs/>
       <div className="inline-block border-b pb-2">
