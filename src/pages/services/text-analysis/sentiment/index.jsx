@@ -2,13 +2,19 @@ import {CustomHelmet} from "../../../../helmet/HelmetProvider.jsx";
 import '../../../../components/globalIcons.jsx'
 import {Icon07} from "../../../../components/globalIcons.jsx";
 import Breadcrumbs from '../../../../components/Breadcrumbs.jsx'
-
+import {useDispatch} from "react-redux";
+import {setSentimentQuery} from "../../../../stores/sentiment-query.jsx";
 
 export default function Sentiment() {
 
+  const dispatch = useDispatch();
+
+  function sentimentArea(e) {
+    dispatch(setSentimentQuery(e.target.value))
+  }
 
   return (
-    <div className="p-5 md:p-10" style={{minHeight: "100vh"}}>
+    <div className="p-5 md:p-10">
       <CustomHelmet title="Glomil Portal | Sentiment"/>
       <Breadcrumbs/>
       <div className="inline-block border-b pb-2">
@@ -22,7 +28,7 @@ export default function Sentiment() {
         <div className="flex flex-col flex-wrap md:flex-row gap-x-5 gap-y-5 items-center w-100">
           <textarea className="flex-auto w-full md:w-auto border border-2 rounded mt-3 p-2" name="queryArea"
                     id="queryArea"
-                    rows="3" placeholder="Enter long form text here"></textarea>
+                    rows="3" placeholder="Enter long form text here" onChange={sentimentArea}></textarea>
           <button className="bg-blue-700 text-slate-50 px-2 py-1 rounded hover:bg-blue-800 duration-150"
                   onClick={() => alert("button passive")}>Sorgulama Yap
           </button>

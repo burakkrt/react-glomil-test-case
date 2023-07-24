@@ -10,7 +10,8 @@ export default function ServicesLayout() {
       <div className="hidden col-span-12 lg:block lg:col-span-3 2xl:col-span-2">
         <Sidebar/>
       </div>
-      <div className="col-span-12 lg:col-start-4 lg:col-span-9 2xl:col-start-3 2xl:col-span-10  ">
+      <div className="col-span-12 lg:col-start-4 lg:col-span-9 2xl:col-start-3 2xl:col-span-10"
+           style={{minHeight: "100vh"}}>
         <Outlet/>
       </div>
     </div>
