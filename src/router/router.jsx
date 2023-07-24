@@ -8,6 +8,7 @@ import PrivatePageLayout from '../auth/PrivatePage.jsx'
 import UserLogin from "../pages/login/user";
 import ServicesLayout from "../pages/services";
 import ServicesWelcome from "../pages/services/welcome"
+import TextAnalysis from "../pages/services/text-analysis/sentiment";
 
 const router = [
   {
@@ -21,10 +22,22 @@ const router = [
       }, {
         path: '/services',
         element: <ServicesLayout/>,
-        children: [{
-          index: true,
-          element: <ServicesWelcome/>
-        }]
+        children: [
+          {
+            index: true,
+            element: <ServicesWelcome/>
+          },
+          {
+            path: 'text-analysis',
+            element: null,
+            children: [
+              {
+                path: 'sentiment',
+                element: <TextAnalysis/>
+              }
+            ]
+          }
+        ]
       }
     ]
   }, {
