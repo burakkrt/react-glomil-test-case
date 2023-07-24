@@ -10,9 +10,7 @@ export default function QueryResult() {
         <Icon07 className="inline-block me-2 text-xl mt-1"/>
         <div className="w-fit">
           <span className="font-bold">This text positive</span>
-          <p className="mt-3">%96 Bots.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo dolores</p>
+          <p className="mt-3">%96 Bots.</p>
         </div>
 
       </div>
