@@ -11,6 +11,7 @@ import ServicesWelcome from "../pages/services/welcome"
 import Sentiment from "../pages/services/text-analysis/sentiment";
 import TextAnalysisLayout from "../pages/services/text-analysis/";
 import TextAnalysis from "../pages/services/text-analysis/welcome"
+import Bots from '../pages/services/bots'
 
 export const router = [
   {
@@ -46,6 +47,10 @@ export const router = [
                 breadcrumb: "Sentiment",
               }
             ]
+          }, {
+            path: 'bots',
+            element: <Bots/>,
+            breadcrumb: "Bots"
           }
         ]
       }
