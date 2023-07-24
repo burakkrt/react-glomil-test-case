@@ -1,13 +1,9 @@
 import logo from '../../assets/img/glomil-logo.png'
-import {useNavigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import './index.css'
 
 export default function Header() {
 
-  const navigate = useNavigate();
-
-  const routePageHandler = (path) => {
-    navigate(path)
-  }
 
   return (
     <header className="grid grid-cols-12">
@@ -16,11 +12,11 @@ export default function Header() {
                      style={{maxWidth: "200px"}}/>
         </button>
       </div>
-      <div className="bg-yellow-200 col-span-4 flex flex-row justify-center items-center gap-x-5 text-lg">
-        <button onClick={() => routePageHandler('/')}>Anasayfa</button>
-        <button onClick={() => routePageHandler('/services')}>Hizmetler</button>
-        <button onClick={() => routePageHandler('/paketler')}>Paketler</button>
-        <button onClick={() => routePageHandler('/urunler')}>Ürünler</button>
+      <div className="bg-yellow-0 col-span-4 flex flex-row justify-center items-center gap-x-5 text-lg">
+        <NavLink to="/">Anasayfa</NavLink>
+        <NavLink to="/services">Hizmetler</NavLink>
+        <NavLink to="/packets">Paketler</NavLink>
+        <NavLink to="/products">Ürünler</NavLink>
       </div>
       <div className="bg-stone-200 col-span-6">
 
