@@ -9,6 +9,8 @@ import UserLogin from "../pages/login/user";
 import ServicesLayout from "../pages/services";
 import ServicesWelcome from "../pages/services/welcome"
 import Sentiment from "../pages/services/text-analysis/sentiment";
+import TextAnalysisLayout from "../pages/services/text-analysis/";
+import TextAnalysis from "../pages/services/text-analysis/welcome"
 
 export const router = [
   {
@@ -31,9 +33,13 @@ export const router = [
           },
           {
             path: 'text-analysis',
-            element: null,
+            element: <TextAnalysisLayout/>,
             breadcrumb: "Text Analysis",
             children: [
+              {
+                index: true,
+                element: <TextAnalysis/>
+              },
               {
                 path: 'sentiment',
                 element: <Sentiment/>,
