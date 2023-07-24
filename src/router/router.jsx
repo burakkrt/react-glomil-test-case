@@ -8,23 +8,46 @@ import PrivatePageLayout from '../auth/PrivatePage.jsx'
 import UserLogin from "../pages/login/user";
 import ServicesLayout from "../pages/services";
 import ServicesWelcome from "../pages/services/welcome"
+import Sentiment from "../pages/services/text-analysis/sentiment";
+import TextAnalysisLayout from "../pages/services/text-analysis/";
+import TextAnalysis from "../pages/services/text-analysis/welcome"
 
-const router = [
+export const router = [
   {
     path: '/',
     element: <MainLayout/>,
     errorElement: <NotFound404/>,
+    breadcrumb: "Anasayfa",
     children: [
       {
         index: true,
-        element: <HomePageLayout/>
+        element: <HomePageLayout/>,
       }, {
         path: '/services',
         element: <ServicesLayout/>,
-        children: [{
-          index: true,
-          element: <ServicesWelcome/>
-        }]
+        breadcrumb: "Hizmetler",
+        children: [
+          {
+            index: true,
+            element: <ServicesWelcome/>
+          },
+          {
+            path: 'text-analysis',
+            element: <TextAnalysisLayout/>,
+            breadcrumb: "Text Analysis",
+            children: [
+              {
+                index: true,
+                element: <TextAnalysis/>
+              },
+              {
+                path: 'sentiment',
+                element: <Sentiment/>,
+                breadcrumb: "Sentiment",
+              }
+            ]
+          }
+        ]
       }
     ]
   }, {
