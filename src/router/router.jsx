@@ -8,20 +8,22 @@ import PrivatePageLayout from '../auth/PrivatePage.jsx'
 import UserLogin from "../pages/login/user";
 import ServicesLayout from "../pages/services";
 import ServicesWelcome from "../pages/services/welcome"
-import TextAnalysis from "../pages/services/text-analysis/sentiment";
+import Sentiment from "../pages/services/text-analysis/sentiment";
 
-const router = [
+export const router = [
   {
     path: '/',
     element: <MainLayout/>,
     errorElement: <NotFound404/>,
+    breadcrumb: "Anasayfa",
     children: [
       {
         index: true,
-        element: <HomePageLayout/>
+        element: <HomePageLayout/>,
       }, {
         path: '/services',
         element: <ServicesLayout/>,
+        breadcrumb: "Hizmetler",
         children: [
           {
             index: true,
@@ -30,10 +32,12 @@ const router = [
           {
             path: 'text-analysis',
             element: null,
+            breadcrumb: "Text Analysis",
             children: [
               {
                 path: 'sentiment',
-                element: <TextAnalysis/>
+                element: <Sentiment/>,
+                breadcrumb: "Sentiment",
               }
             ]
           }

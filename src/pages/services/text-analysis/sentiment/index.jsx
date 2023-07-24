@@ -1,12 +1,16 @@
 import {CustomHelmet} from "../../../../helmet/HelmetProvider.jsx";
 import '../../../../components/globalIcons.jsx'
 import {Icon07} from "../../../../components/globalIcons.jsx";
+import Breadcrumbs from '../../../../components/Breadcrumbs.jsx'
 
-export default function TextAnalysis() {
+
+export default function Sentiment() {
+
 
   return (
-    <div className="p-10" style={{minHeight: "100vh"}}>
+    <div className="p-5 md:p-10" style={{minHeight: "100vh"}}>
       <CustomHelmet title="Glomil Portal | Sentiment"/>
+      <Breadcrumbs/>
       <div className="inline-block border-b pb-2">
         <h1 className="text-2xl font-bold text-slate-700">Sentiment</h1>
         <p className="mt-5">Her algoritma farklı değer sonuçlarını vermektedir. İlgili alana istenilen bilgileri
