@@ -1,6 +1,9 @@
 import welcomePortalImage from '../../../assets/img/welcome-portal.png'
+import {useNavigate} from "react-router-dom";
 
 export default function WelcomePortal() {
+
+  const navigate = useNavigate();
 
   return (
     <div className="py-14" style={{backgroundColor: "#212846"}}>
@@ -13,7 +16,7 @@ export default function WelcomePortal() {
             oluşturmak için Portal'ın evrensel yazılım dilini kullanın.</p>
           <button
             className="text-md bg-blue-700 text-slate-200 py-2 px-4 mt-4 rounded hover:bg-blue-800 duration-150"
-            onClick={() => alert("Button Passive")}>Hadi
+            onClick={() => navigate('/services')}>Hadi
             Başlayalım
           </button>
         </div>
