@@ -17,6 +17,8 @@ import Bots from "../pages/services/bots";
 
 export const router = [
   {
+    name: "Anasayfa",
+    link: "/",
     path: "/",
     element: <><MainLayout />, <ScrollToTop /></>,
     errorElement: <NotFound404 />,
@@ -26,6 +28,8 @@ export const router = [
         index: true,
         element: <HomePageLayout />
       }, {
+        name: "Hizmetler",
+        link: "/services",
         path: "/services",
         element: <ServicesLayout />,
         breadcrumb: "Hizmetler",
@@ -35,6 +39,8 @@ export const router = [
             element: <ServicesWelcome />
           },
           {
+            name: "Text Analiz",
+            link: "/services/text-analysis",
             path: "text-analysis",
             element: <TextAnalysisLayout />,
             breadcrumb: "Text Analysis",
@@ -44,12 +50,16 @@ export const router = [
                 element: <TextAnalysis />
               },
               {
+                name: "Sentiment Analiz",
+                link: "/services/text-analysis/sentiment",
                 path: "sentiment",
                 element: <Sentiment />,
                 breadcrumb: "Sentiment"
               }
             ]
           }, {
+            name: "Bot Analiz",
+            link: "/services/bots",
             path: "bots",
             element: <Bots />,
             breadcrumb: "Bots"
@@ -58,6 +68,8 @@ export const router = [
       }
     ]
   }, {
+    name: "Giriş Yap",
+    link: "/user-login",
     path: "/user-login",
     element: <UserLogin />
   }

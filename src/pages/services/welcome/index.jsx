@@ -1,5 +1,5 @@
 import PortalBoxs from "../../home/portal-live-products-two/PortalBoxs.jsx";
-import {Icon06} from "../../../components/globalIcons.jsx";
+import { Icon06 } from "../../../components/globalIcons.jsx";
 
 export default function ServicesWelcome() {
 
@@ -10,13 +10,13 @@ export default function ServicesWelcome() {
         <p className="my-5">Temmeller, ilgi çekici düzenler ve uçtan uca kullanıcı deneyimleri oluşturmak için gereken
           yazılımsal
           öğelerdir.</p>
-        <a href="#" className="underline">Hizmetleri Keşfedin
+        <button onClick={() => alert("button passive")} className="underline">Hizmetleri Keşfedin
           <Icon06
-            className="inline-block ms-1 text-blue-600"/>
-        </a>
+            className="inline-block ms-1 text-blue-600" />
+        </button>
       </div>
       <div className="flex flex-wrap gap-3 justify-center border-b-2 my-14 pb-5">
-        <PortalBoxs/>
+        <PortalBoxs />
       </div>
     </div>
   );
