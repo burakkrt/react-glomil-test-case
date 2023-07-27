@@ -12,6 +12,8 @@ export { BsQuestionCircleFill as Icon11 } from "react-icons/bs";
 export { IoIosSettings as Icon12 } from "react-icons/io";
 export { BiSolidUser as Icon13 } from "react-icons/bi";
 export { BsFillArrowLeftCircleFill as Icon14 } from "react-icons/bs";
+export { GiHamburgerMenu as Icon15 } from "react-icons/gi";
+export { AiOutlineClose as Icon16 } from "react-icons/ai";
 
 
 //example : ImTicket : icon01
