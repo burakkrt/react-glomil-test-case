@@ -1,7 +1,9 @@
-import { Icon09 } from "../../../components/globalIcons.jsx";
-import { router } from "../../../router/router.jsx";
+import { Icon09 } from "../../components/globalIcons.jsx";
+import { router } from "../../router/router.jsx";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toogleResNavigation } from "../../stores/resNavigation.jsx";
+import { useDispatch } from "react-redux";
 
 let arr = [];
 const search = (router) => {
@@ -18,6 +20,7 @@ const search = (router) => {
 };
 
 export default function Search() {
+  const dispatch = useDispatch();
   arr = [];
   // eslint-disable-next-line no-unused-vars
   const [searchPages, setSearchPages] = useState(search(router));
@@ -29,6 +32,7 @@ export default function Search() {
     setSearchInput("");
     const searchResults = document.querySelector("#searchResults");
     searchResults.classList.replace("visible", "invisible");
+    dispatch(toogleResNavigation());
   }
 
   function visibleSearch() {
