@@ -3,7 +3,7 @@ import "../../../../components/globalIcons.jsx";
 import { Icon07 } from "../../../../components/globalIcons.jsx";
 import Breadcrumbs from "../../../../components/Breadcrumbs.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import sentimentQuery, { setSentimentQuery } from "../../../../stores/sentiment-query.jsx";
+import { setSentimentQuery } from "../../../../stores/sentiment-query.jsx";
 
 export default function Sentiment() {
 
@@ -31,7 +31,7 @@ export default function Sentiment() {
       <div className="mt-14 xl:w-4/5 2xl:w-3/5">
         <h2 className="text-2xl font-bold text-slate-700">Sorgulama Alanı</h2>
         <div className="flex flex-col flex-wrap md:flex-row gap-x-5 gap-y-5 items-center w-100">
-          <textarea className="flex-auto w-full md:w-auto border border-2 rounded mt-3 p-2" name="queryArea"
+          <textarea className="flex-auto w-full md:w-auto border-2 rounded mt-3 p-2" name="queryArea"
                     id="queryArea"
                     rows="3" placeholder="Enter long form text here" onChange={sentimentArea}></textarea>
           <button className="bg-blue-700 text-slate-50 px-2 py-1 rounded hover:bg-blue-800 duration-150"
