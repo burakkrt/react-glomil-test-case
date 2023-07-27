@@ -1,4 +1,4 @@
-import {useSelector, useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   setAlgorithmSelect,
   setUserCount1,
@@ -9,11 +9,18 @@ import {
 
 export default function Questioning() {
 
-  const algorithmStates = useSelector(state => state.algorithmSelectReducer)
+  const algorithmStates = useSelector(state => state.algorithmSelectReducer);
   const dispatch = useDispatch();
 
   function algorithmSelectHandler(e) {
-    dispatch(setAlgorithmSelect(e.target.value))
+    dispatch(setAlgorithmSelect(e.target.value));
+  }
+
+  const res = useSelector(state => state.algorithmSelectReducer);
+
+  function getBotsStates() {
+    console.log(res);
+    alert(`Algoritma Tipi : ${res.algorithmSelect}\nCount 1 : ${res.userCount1}\nCount 2 : ${res.userCount2}\nCount 3 : ${res.userCount3}\nCount 4 : ${res.userCount4}\n\nBu işlme henüz aktif edilmedi.`);
   }
 
   return (
@@ -41,23 +48,23 @@ export default function Questioning() {
       <div className=" mt-10">
         <label>
           <input className="w-full bg-slate-100 p-3 rounded border border-2" type="text" placeholder="userCount"
-                 onChange={(e) => dispatch(setUserCount1(e.target.value))}/>
+                 onChange={(e) => dispatch(setUserCount1(e.target.value))} />
         </label>
         <label>
           <input className="w-full bg-slate-100 p-3 rounded border border-2 mt-2" type="text"
-                 placeholder="userCount" onChange={(e) => dispatch(setUserCount2(e.target.value))}/>
+                 placeholder="userCount" onChange={(e) => dispatch(setUserCount2(e.target.value))} />
         </label>
         <label>
           <input className="w-full bg-slate-100 p-3 rounded border border-2 mt-2" type="text"
-                 placeholder="userCount" onChange={(e) => dispatch(setUserCount3(e.target.value))}/>
+                 placeholder="userCount" onChange={(e) => dispatch(setUserCount3(e.target.value))} />
         </label>
         <label>
           <input className="w-full bg-slate-100 p-3 rounded border border-2 mt-2" type="text"
-                 placeholder="userCount" onChange={(e) => dispatch(setUserCount4(e.target.value))}/>
+                 placeholder="userCount" onChange={(e) => dispatch(setUserCount4(e.target.value))} />
         </label>
         <button className="mt-2 px-2 py-1 bg-blue-700 text-slate-100 rounded"
 
-                onClick={() => alert('button passive')}>Sorgulama Yap
+                onClick={getBotsStates}>Sorgulama Yap
         </button>
       </div>
     </>
