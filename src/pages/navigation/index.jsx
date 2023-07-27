@@ -1,26 +1,38 @@
-import './index.css'
-import Navlinks from "./left-infos/Navlinks.jsx";
-import Search from "./right-infos/Search.jsx";
-import Logo from "./left-infos/Logo.jsx";
-import NavSettings from "./right-infos/NavSettings.jsx";
-import Profile from "./right-infos/Profile.jsx";
+import "./index.css";
+import Navlinks from "./Navlinks.jsx";
+import Search from "./Search.jsx";
+import Logo from "./Logo.jsx";
+import NavSettings from "./NavSettings.jsx";
+import Profile from "./Profile.jsx";
+import { Icon15, Icon16 } from "../../components/globalIcons.jsx";
+import { useSelector, useDispatch } from "react-redux";
+import { toogleResNavigation } from "../../stores/resNavigation.jsx";
 
 export default function Header() {
 
+  const { visible } = useSelector(state => state.resNavigation);
+  const dispatch = useDispatch();
+
 
   return (
-    <header className="grid grid-cols-12 py-2">
-      <div className="col-span-2 flex flex-row justify-center items-center">
-        <Logo/>
+    <header className="relative">
+      <div className="w-full flex flex-row items-center justify-between px-3">
+        <Logo />
+        {visible ?
+          <Icon16 className="text-4xl inline-block text-slate-700" onClick={() => dispatch(toogleResNavigation())} /> :
+          <Icon15 className="text-4xl inline-block text-slate-700" onClick={() => dispatch(toogleResNavigation())} />}
       </div>
-      <div
-        className="col-span-3 flex flex-row justify-center items-center gap-x-4 text-md font-semibold text-slate-600">
-        <Navlinks/>
-      </div>
-      <div className="col-span-7 flex items-center gap-x-5 justify-center">
-        <Search/>
-        <NavSettings/>
-        <Profile/>
+      <div className={`${visible ? "flex" : "hidden"} flex flex-col items-center gap-y-4`}>
+        <div className="hidden">
+          <Navlinks />
+        </div>
+        <div className="mt-4">
+          <Search />
+        </div>
+        <div className="flex items-center justify-around w-full mb-4 mt-2">
+          <Profile />
+          <NavSettings />
+        </div>
       </div>
     </header>
   );
