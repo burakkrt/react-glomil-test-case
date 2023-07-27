@@ -15,23 +15,23 @@ export default function Header() {
 
 
   return (
-    <header className="relative">
-      <div className="w-full flex flex-row items-center justify-between px-3">
+    <header className="relative xl:flex px-3 xl:px-10 xl:gap-x-20">
+      <div className="w-full xl:w-fit flex flex-row items-center justify-between">
         <Logo />
         {visible ?
-          <Icon16 className="text-4xl inline-block text-slate-700" onClick={() => dispatch(toogleResNavigation())} /> :
-          <Icon15 className="text-4xl inline-block text-slate-700" onClick={() => dispatch(toogleResNavigation())} />}
+          <Icon16 className="inline-block xl:hidden text-4xl text-slate-800" onClick={() => dispatch(toogleResNavigation())} /> :
+          <Icon15 className="inline-block xl:hidden text-4xl text-slate-800" onClick={() => dispatch(toogleResNavigation())} />}
       </div>
-      <div className={`${visible ? "flex" : "hidden"} flex flex-col items-center gap-y-4`}>
-        <div className="hidden">
+      <div className={`${visible ? "flex" : "hidden"} xl:flex flex-wrap flex-auto flex-row sm:justify-between items-center gap-y-5 py-6 sm:px-3`}>
+        <div className="hidden lg:flex flex-auto flex-row flex-wrap gap-x-3">
           <Navlinks />
         </div>
-        <div className="mt-4">
+        <div className="sm:order-0 mx-auto sm:mx-0 lg:me-5">
           <Search />
         </div>
-        <div className="flex items-center justify-around w-full mb-4 mt-2">
-          <Profile />
+        <div className="flex flex-row items-center gap-x-3 sm:mb-0 px-1 mx-auto sm:mx-0">
           <NavSettings />
+          <Profile />
         </div>
       </div>
     </header>
