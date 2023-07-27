@@ -11,7 +11,6 @@ export default function WelcomePortal() {
   useEffect(() => {
     const headerDOM = document.querySelector("header");
     window.addEventListener("scroll", () => {
-      console.log(marginTop);
       if (scrollY >= headerDOM.clientHeight) {
         setMarginTop(headerDOM.clientHeight);
       }
