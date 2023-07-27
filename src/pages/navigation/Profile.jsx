@@ -5,8 +5,8 @@ export default function Profile() {
   return (
     <div className="lg:order-2">
       <div className="relative inline-block align-middle">
-        <Icon13 className="text-4xl text-slate-50 bg-slate-400 rounded rounded-full p-1" />
-        <div className="absolute bottom-0 end-0 bg-green-400 rounded-full border border-2 border-slate-50"
+        <Icon13 className="text-4xl text-slate-50 bg-slate-400 rounded-full p-1" />
+        <div className="absolute bottom-0 end-0 bg-green-400 rounded-full border-2 border-slate-50"
              style={{ width: "15px", height: "15px" }}></div>
       </div>
       <div className="leading-tight inline-block ms-2 align-middle">
