@@ -51,7 +51,7 @@ export default function Search() {
     <div className="relative px-1">
       <div className="relative">
         <input className="w-full py-1 rounded-lg border-2 ps-12" onFocus={visibleSearch} onBlur={inVisibleSearch} type="text" placeholder="Search..."
-               style={{ maxWidth: "280px" }} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
+               style={{ maxWidth: "290px" }} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
         <Icon09 className="absolute top-1/2 start-3 -translate-y-1/2 text-2xl text-slate-500" />
       </div>
       <div className="invisible w-full absolute z-40 overflow-auto bg-slate-50 shadow-lg border-2 rounded mt-1 p-2" id="searchResults" style={{ maxHeight: "252px" }}>
