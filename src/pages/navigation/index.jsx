@@ -44,7 +44,7 @@ export default function Header() {
           <Icon15 className="inline-block xl:hidden text-4xl text-slate-800" onClick={() => dispatch(toogleResNavigation())} />}
       </div>
       <div className={`${visible ? "flex" : "hidden"} xl:flex flex-wrap flex-auto flex-row sm:justify-between items-center gap-y-5 py-6 sm:px-3`}>
-        <div className="hidden lg:flex flex-auto flex-row flex-wrap gap-x-3">
+        <div className="hidden lg:flex flex-auto flex-row flex-wrap gap-x-4">
           <Navlinks />
         </div>
         <div className="sm:order-0 mx-auto sm:mx-0 lg:me-5">
