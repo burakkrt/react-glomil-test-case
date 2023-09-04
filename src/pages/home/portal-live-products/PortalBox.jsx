@@ -9,7 +9,7 @@ export default function PortalBox({ title, desc }) {
       <p>{desc}</p>
       <button onClick={() => alert("button passive")} className="underline">Hizmetleri Keşfedin
         <Icon06
-          className="inline-block ms-1 text-blue-600" />
+          className="inline-block ms-1 text-blue-700" />
       </button>
     </div>
   );
